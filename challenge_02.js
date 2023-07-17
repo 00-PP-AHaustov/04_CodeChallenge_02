@@ -21,16 +21,17 @@ let person, age, drink, text;
 person = prompt("Bitte Namen eingeben: ");
 age = prompt("Bitte Alter eingeben: ");
 
-if (age => 0 && age < 6) {
+if (age < 6) {
     drink = "Milch";
 } else if (age < 13) {
     drink = "Saft";
 } else if (age < 18) {
     drink = "Cola";
-} else if (age => 18) {
+} else if (age >= 18) {
     drink = "Wein";
-} else drink = "Tee";
-
+} else {
+    drink = "Tee";
+}
 text = `${person} gönnt sich heute ${drink}`;
 
 console.log(text);
